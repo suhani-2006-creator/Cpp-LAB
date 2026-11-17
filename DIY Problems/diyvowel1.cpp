@@ -1,0 +1,41 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+    string s;
+    int vowels = 0, consonants = 0;
+
+    cout << "Enter a sentence: ";
+    getline(cin, s);
+
+    for (char ch : s)
+    {
+        if (isalpha(ch))
+        {
+            if (ch == 'a' || ch == 'e' || ch == 'i' ||
+                ch == 'o' || ch == 'u' ||
+                ch == 'A' || ch == 'E' || ch == 'I' ||
+                ch == 'O' || ch == 'U')
+            {
+                vowels++;
+            }
+            else
+            {
+                consonants++;
+            }
+        }
+    }
+
+    cout << "Number of vowels = " << vowels << endl;
+    cout << "Number of consonants = " << consonants << endl;
+
+    return 0;
+}
+/*
+OUTPUT:
+Enter a sentence: Hello World
+Number of vowels = 3
+Number of consonants = 7
+*/
